@@ -11,11 +11,6 @@
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
-}
-
-.headerRight {
-  display: flex;
 
   nav {
     height: 5rem;
@@ -55,5 +50,9 @@
         background: var(--yellow-500);
       }
     }
+  }
+
+  button {
+    margin-left: auto;
   }
 }
