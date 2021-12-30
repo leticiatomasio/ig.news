@@ -43,7 +43,10 @@ button {
   font-weight: 400;
 }
 
-h1,
+h1 {
+  font-weight: 900;
+}
+
 h2,
 h3,
 h4,
@@ -55,6 +58,7 @@ strong {
 
 button {
   cursor: pointer;
+  border: 0;
 }
 
 a {

@@ -1,0 +1,45 @@
+.mainContent {
+  height: calc(100vh - 5rem);
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.textContainer {
+  max-width: 600px;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+
+  & > span {
+    font-weight: 700;
+  }
+
+  h1 {
+    font-size: 4.5rem;
+    line-height: 4.5rem;
+    margin-top: 2.5rem;
+  }
+
+  p {
+    line-height: 2.25rem;
+
+    &:first-of-type {
+      margin-top: 1.5rem;
+    }
+    &:last-of-type {
+      font-weight: 700;
+    }
+  }
+
+  button {
+    margin-top: 2.5rem;
+  }
+}
+
+.cyanText {
+  color: var(--cyan-500);
+}
