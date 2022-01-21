@@ -4,6 +4,8 @@ import { SubscribeButton } from "../components/SubscribeButton";
 
 import styles from "./home.module.scss";
 import { stripe } from "../services/stripe";
+import { useSession } from "next-auth/react";
+import Link from "next/link";
 
 type HomeProps = {
   product: {
@@ -13,6 +15,8 @@ type HomeProps = {
 };
 
 export default function Home(props: HomeProps) {
+  const { data: session } = useSession();
+
   return (
     <>
       <Head>
@@ -24,9 +28,22 @@ export default function Home(props: HomeProps) {
           <h1>
             News about the <span className={styles.cyanText}>React</span> world
           </h1>
-          <p>Get access to all the publications</p>
-          <p className={styles.cyanText}>for {props.product.amount} month</p>
-          <SubscribeButton priceId={props.product.priceId} />
+          {!session?.activeSubscription ? (
+            <div>
+              <p>Get access to all the publications</p>
+              <p className={styles.cyanText}>
+                for {props.product.amount} month
+              </p>
+              <SubscribeButton priceId={props.product.priceId} />
+            </div>
+          ) : (
+            <div>
+              <p>Thank you for staying with us</p>
+              <p className={styles.cyanText}>
+                <Link href="/posts">Check what you've missed &rarr;</Link>
+              </p>
+            </div>
+          )}
         </div>
         <img src="/images/illustration.svg" alt="Girl coding" />
       </main>
