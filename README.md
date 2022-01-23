@@ -10,7 +10,7 @@ Inside the root directory, run the command `yarn install`.
 
 ## Creating your .env.local file and acessing your own Secret Keys
 
-For this application to work, you need to integrate it to Stripe, FaunaDB and Prismic, get your own Secret Keys and update `.env_sample` to an `.env.local` file with all environment variables properly stored.
+For this application to work, you need to integrate it to Github, Stripe, FaunaDB and Prismic, get your own Secret Keys and update `.env_sample` to an `.env.local` file with all environment variables properly stored.
 
 ## Development server
 
