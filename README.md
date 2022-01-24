@@ -24,5 +24,5 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 
 ## Listening to Subscription events from Stripe API
 
-Use the Stripe CLI to forward Stripe events to the local webhook endpoint on your server by running the command `stripe listen --forward-to localhost:3000/webhooks`. [More documentation](https://stripe.com/docs/stripe-cli/webhooks).
+Use the Stripe CLI to forward Stripe events to the local webhook endpoint on your server by running the command `stripe listen --forward-to localhost:3000/webhooks`. [More documentation.](https://stripe.com/docs/stripe-cli/webhooks)
 
